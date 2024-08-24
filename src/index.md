@@ -1,4 +1,5 @@
 # Allô Montréal
+## Montreal 56 electoral counties
 
 ```js
 const metadata = FileAttachment("metadata.parquet").parquet();
@@ -6,13 +7,13 @@ const mtl_topo = FileAttachment("mtl_topo.json").json();
 ```
 
 ```js
-const districts_mesh = topojson.mesh(mtl_topo, mtl_topo.objects.data)
-const districts = topojson.feature(mtl_topo, mtl_topo.objects.data).features
+const districts_mesh = topojson.mesh(mtl_topo, mtl_topo.objects.districts)
+const districts = topojson.feature(mtl_topo, mtl_topo.objects.districts).features
 ```
 
 ```js
 // create inputs based on time
-const yearSelect = view(Inputs.radio([2011, 2016], {label: "Year:", value:2011}))
+const yearSelect = view(Inputs.radio([2011, 2016], {label: "Population Size:", value: 2011}))
 ```
 
 ```js
