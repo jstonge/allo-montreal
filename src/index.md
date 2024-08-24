@@ -1,7 +1,7 @@
 # Allô Montréal
 
 ```js
-const metadata = FileAttachment("metadata.csv").csv({typed:true});
+const metadata = FileAttachment("metadata.parquet").parquet();
 const mtl_topo = FileAttachment("mtl_topo.json").json();
 ```
 
@@ -16,7 +16,7 @@ const yearSelect = view(Inputs.radio([2011, 2016], {label: "Year:", value:2011})
 ```
 
 ```js
-const metadata_f = metadata.filter(d=>d.year == parseInt(yearSelect))
+const metadata_f = [...metadata].filter(d=>d.year == parseInt(yearSelect))
 ```
 
 ```js
@@ -53,4 +53,8 @@ Plot.plot({
         }))
     ]
 })
+```
+
+```js
+Inputs.table(metadata)
 ```

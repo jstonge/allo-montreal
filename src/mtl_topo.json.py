@@ -19,7 +19,6 @@ topology = Topology({"districts": districts})
 sys.stdout.write(json.dumps(topology.to_dict()))
 
 
-
 # Example: Dissolve arrondissements to ensure they don't overlap within themselves
 # arrondissement_dissolved = districts.dissolve(by='arrondissement').reset_index()
 
