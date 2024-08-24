@@ -2,7 +2,7 @@
 
 ```js
 const metadata = FileAttachment("metadata.csv").csv();
-const mtl_topo = FileAttachment("mtl.json").json();
+const mtl_topo = FileAttachment("mtl_topo.json").json();
 ```
 
 ```js
@@ -10,5 +10,5 @@ Inputs.table(metadata)
 ```
 
 ```js
-mtl_topo
+Inputs.table(mtl_topo)
 ```

@@ -7,7 +7,7 @@ import requests
 mtl_datasets = "https://donnees.montreal.ca/dataset"
 fname="districts-electoraux-2021.geojson"
 URL=f"{mtl_datasets}/70acec75-c2b4-4d26-a399-facc7b0ad9bf/resource/d0c1467b-a551-42df-98b4-057e00a84275/download/{fname}"
-TMPDIR = 'src/.observablehq/cache/mtl.json'
+TMPDIR = 'src/.observablehq/cache/mtl_topo.json'
 
 r = requests.get(url=URL,  headers={'User-Agent': 'Mozilla/5.0'})
 
