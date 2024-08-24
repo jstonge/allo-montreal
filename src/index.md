@@ -1,9 +1,9 @@
 # Allô Montréal
 
 ```js
-const languages = FileAttachment("educ_uoe_lang01.parquet").parquet();
+const metadata = FileAttachment("metadata.csv").csv();
 ```
 
 ```js
-Inputs.table(languages)
+Inputs.table(metadata)
 ```
