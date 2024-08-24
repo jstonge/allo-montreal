@@ -21,6 +21,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      
+      - name: Install duckdb
+        run: npm -i duckdb
 
       - name: Build
         run: npm run build
